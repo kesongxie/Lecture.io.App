@@ -19,7 +19,7 @@ class RegisteredClassListTableViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.estimatedRowHeight = self.tableView.rowHeight
         self.tableView.rowHeight = UITableViewAutomaticDimension
-        
+		self.tableView.tableFooterView = UIView()
 //        NotificationCenter.default.addObserver(self, selector: #selector(self.coursesUpdated), name: NSNotification.Name(rawValue: addedCourseNotificationName), object: nil)
 //        
 //        
@@ -47,7 +47,6 @@ class RegisteredClassListTableViewController: UITableViewController {
         let userDefault = UserDefaults()
         return (userDefault.object(forKey: courseRegisteredKey) as? [Int])?.count ?? 0
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ClassListCell", for: indexPath) as! RegisteredClassListTableViewCell
