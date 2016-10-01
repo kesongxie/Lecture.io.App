@@ -47,13 +47,13 @@ class CourseConfirmationViewController: UIViewController {
         let userDefault = UserDefaults()
         if !userDefault.bool(forKey: isUserHasAddedCoursesKey){
             userDefault.set(true, forKey: isUserHasAddedCoursesKey)
-            let courseRegistered = userDefault.array(forKey: courseRegistered)
+            //let courseRegistered = userDefault.array(forKey: courseRegistered)
             
             
             
             
         }else{
-            userDefault.set(false, forKey: isUserHasAddedCoursesIden)
+            //userDefault.set(false, forKey: isUserHasAddedCoursesKey)
         }
         
         //userDefault.dictionary(forKey: "courseCodeList")
