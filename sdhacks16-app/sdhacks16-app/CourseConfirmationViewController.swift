@@ -20,7 +20,7 @@ class CourseConfirmationViewController: UIViewController {
     @IBOutlet weak var descirption: UILabel!
     
     @IBAction func cancelConfirmBtnTapped(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+        let _ =  self.navigationController?.popViewController(animated: true)
     }
     
     
