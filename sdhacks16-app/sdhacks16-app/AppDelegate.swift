@@ -42,8 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
        // currentStudent!.courseRegistered = [course1, course2, course3]
         currentStudent!.questionAnswered = [question1, question2]
-        
-        
      	return true
 	}
 

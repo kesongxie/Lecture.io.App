@@ -69,8 +69,8 @@ class CourseConfirmationViewController: UIViewController {
                 for courseRegisteredCode in courseRegisteredCodeList{
                     if courseRegisteredCode == course!.courseCode{
                         found = true
-                        break
-                    }
+						return
+					}
                 }
                 if !found{
                     //add courses if not already existed
