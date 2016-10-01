@@ -15,6 +15,9 @@ let courseRegisteredKey = "courseRegisteredKey"
 
 let addedCourseNotificationName = "addedCourseNotificationName"
 
+let QuestionTableViewCellIden = "QuestionTableViewCellIden"
+
+
 func getCourseFromCourseCode(code: Int) -> Courses?{
     if let currentCourse = (UIApplication.shared.delegate as? AppDelegate)?.currentCourses{
         for course in currentCourse{

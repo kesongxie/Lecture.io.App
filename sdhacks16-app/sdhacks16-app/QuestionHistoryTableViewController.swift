@@ -12,6 +12,8 @@ class QuestionHistoryTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.estimatedRowHeight = self.tableView.rowHeight
+        self.tableView.rowHeight = UITableViewAutomaticDimension
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -38,9 +40,10 @@ class QuestionHistoryTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: QuestionTableViewCellIden, for: indexPath) as! QuestionTableViewCell
         
-        
+        var questionList = getCurrentStudent()!.questionAnswered!
+        cell.question = questionList[indexPath.row]
         // Configure the cell...
 
         return cell

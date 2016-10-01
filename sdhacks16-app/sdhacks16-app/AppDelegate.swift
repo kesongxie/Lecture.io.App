@@ -37,8 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         currentCourses.append(course4)
 
         
-        let question1 = Question(questionId: 1, questionText: "pick a correct conclusion that proves the correctness of MinSort")
-        let question2 = Question(questionId: 2, questionText: "How many probes do we make when doing Linear Search on a list of size n")
+        let question1 = Question(questionId: 1, questionText: "Pick a correct conclusion that proves the correctness of MinSort?", lectureNum: "Lecture 1", date: "Sep 28th, 2016")
+        let question2 = Question(questionId: 2, questionText: "How many probes do we make when doing Linear Search on a list of size n?", lectureNum: "Lecture 2", date: "Sep 30th, 2016")
         
        // currentStudent!.courseRegistered = [course1, course2, course3]
         currentStudent!.questionAnswered = [question1, question2]

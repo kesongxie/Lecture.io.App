@@ -11,9 +11,13 @@ import Foundation
 class Question{
     let questionId: Int
     let questionText: String
-    init(questionId: Int, questionText: String){
+    let lectureNum: String
+    let date: String
+    init(questionId: Int, questionText: String, lectureNum: String, date: String){
         self.questionId = questionId
         self.questionText = questionText
+        self.lectureNum = lectureNum
+        self.date = date
     }
 
 

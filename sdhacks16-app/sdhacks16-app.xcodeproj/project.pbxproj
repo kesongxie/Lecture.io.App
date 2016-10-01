@@ -143,7 +143,7 @@
 				98DBA7DE1DA01B3D00A37778 /* Lecture.swift */,
 				98DBA7E01DA01ED100A37778 /* Student.swift */,
 				98DBA7DC1DA01AFC00A37778 /* Question.swift */,
-				98DBA7D21D9FA53B00A37778 /* Macro.swift */,
+				98DBA7E71DA0278900A37778 /* Macro */,
 				98DBA7CA1D9F926800A37778 /* Add Class */,
 				431D5B761D9F8F5C00429AEF /* PIDViewController.swift */,
 				98DBA7D41D9FB75D00A37778 /* RegistedClassList */,
@@ -218,6 +218,14 @@
 				98DBA7E51DA0245200A37778 /* QuestionTableViewCell.swift */,
 			);
 			name = QuestionHistory;
+			sourceTree = "<group>";
+		};
+		98DBA7E71DA0278900A37778 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				98DBA7D21D9FA53B00A37778 /* Macro.swift */,
+			);
+			name = Macro;
 			sourceTree = "<group>";
 		};
 		FEC49E438579D6868145B5FC /* Pods */ = {

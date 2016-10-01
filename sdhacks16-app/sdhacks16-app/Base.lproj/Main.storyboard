@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -382,19 +381,38 @@
                                     <frame key="frameInset" width="375" height="91"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QuestionText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tih-Px-pzQ">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leture Num" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKl-a9-syT">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hld-De-7y6">
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.5490196078431373" green="0.5490196078431373" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QuestionText" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tih-Px-pzQ">
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="tih-Px-pzQ" firstAttribute="top" secondItem="sta-3u-oVc" secondAttribute="topMargin" constant="16" id="9ad-7N-PPI"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="tih-Px-pzQ" secondAttribute="bottom" priority="250" constant="16" id="PyZ-oN-zMt"/>
-                                        <constraint firstItem="tih-Px-pzQ" firstAttribute="trailing" secondItem="sta-3u-oVc" secondAttribute="trailingMargin" constant="16" id="a4J-ZS-HB9"/>
-                                        <constraint firstItem="tih-Px-pzQ" firstAttribute="leading" secondItem="sta-3u-oVc" secondAttribute="leadingMargin" constant="16" id="cFP-dE-9JS"/>
+                                        <constraint firstItem="XKl-a9-syT" firstAttribute="leading" secondItem="sta-3u-oVc" secondAttribute="leading" constant="16" id="EYU-EW-rkx"/>
+                                        <constraint firstItem="XKl-a9-syT" firstAttribute="top" secondItem="sta-3u-oVc" secondAttribute="top" constant="20" id="Fsk-wo-L4u"/>
+                                        <constraint firstItem="Hld-De-7y6" firstAttribute="baseline" secondItem="XKl-a9-syT" secondAttribute="baseline" id="I4e-wx-4sh"/>
+                                        <constraint firstAttribute="trailing" secondItem="tih-Px-pzQ" secondAttribute="trailing" constant="16" id="JXg-Wo-Thf"/>
+                                        <constraint firstItem="tih-Px-pzQ" firstAttribute="leading" secondItem="sta-3u-oVc" secondAttribute="leading" constant="16" id="LAD-w7-UM2"/>
+                                        <constraint firstItem="tih-Px-pzQ" firstAttribute="top" secondItem="XKl-a9-syT" secondAttribute="bottom" constant="8" id="dKC-YA-3T1"/>
+                                        <constraint firstAttribute="trailing" secondItem="Hld-De-7y6" secondAttribute="trailing" constant="16" id="l52-61-I9M"/>
+                                        <constraint firstAttribute="bottom" secondItem="tih-Px-pzQ" secondAttribute="bottom" priority="250" constant="16" id="oJ8-LE-ONI"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="date" destination="Hld-De-7y6" id="Wrp-Ed-XGg"/>
+                                    <outlet property="descriptionLabel" destination="tih-Px-pzQ" id="oL1-z7-UdR"/>
+                                    <outlet property="lectureNum" destination="XKl-a9-syT" id="5PH-xa-ppS"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

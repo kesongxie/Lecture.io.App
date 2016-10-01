@@ -10,6 +10,20 @@ import UIKit
 
 class QuestionTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    @IBOutlet weak var lectureNum: UILabel!
+    
+    @IBOutlet weak var date: UILabel!
+    
+    var question: Question?{
+        didSet{
+            descriptionLabel?.text = question!.questionText
+            lectureNum?.text = question!.lectureNum
+            date.text = question!.date
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
