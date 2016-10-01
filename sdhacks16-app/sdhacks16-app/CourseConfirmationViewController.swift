@@ -45,28 +45,32 @@ class CourseConfirmationViewController: UIViewController {
     func confirmCourseRegisteration(){
         //add the course code to the user default
         let userDefault = UserDefaults()
+        print(userDefault.bool(forKey: isUserHasAddedCoursesKey))
         if !userDefault.bool(forKey: isUserHasAddedCoursesKey){
             userDefault.set(true, forKey: isUserHasAddedCoursesKey)
-            if var courseRegistered = userDefault.array(forKey: courseRegisteredKey) as? [Int]{
-                print(courseRegistered)
+        }else{
+            //userDefault.set(false, forKey: isUserHasAddedCoursesKey)
+            if var courseRegisteredCodeList = userDefault.object(forKey: courseRegisteredKey) as? [Int]{
+                print(courseRegisteredCodeList)
+                
+                var found = false
+                for courseRegisteredCode in courseRegisteredCodeList{
+                    if courseRegisteredCode == course!.courseCode{
+                        found = true
+                        break
+                    }
+                }
+                if !found{
+                    courseRegisteredCodeList.append(course!.courseCode)
+                    userDefault.set(courseRegisteredCodeList, forKey: courseRegisteredKey)
+                }
                 //courseRegistered.append(course!.courseCode)
             }else{
                 let coursesCodesList = [course!.courseCode]
-//                userDefault.set(coursesCodesList, forKey: courseRegisteredKey)
-                
-                
+                userDefault.set(coursesCodesList, forKey: courseRegisteredKey)
                 
             }
-            
-            
-            
-            
-        }else{
-            //userDefault.set(false, forKey: isUserHasAddedCoursesKey)
         }
-        
-        //userDefault.dictionary(forKey: "courseCodeList")
-        
     }
     
 
