@@ -1,0 +1,6 @@
+framework module Pods_sdhacks16_app {
+  umbrella header "Pods-sdhacks16-app-umbrella.h"
+
+  export *
+  module * { export * }
+}

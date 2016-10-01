@@ -1,0 +1,6 @@
+framework module Pods_sdhacks16_appTests {
+  umbrella header "Pods-sdhacks16-appTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
