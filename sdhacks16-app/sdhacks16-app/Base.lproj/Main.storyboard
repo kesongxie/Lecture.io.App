@@ -6,10 +6,57 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="3vS-sF-RbE">
+            <objects>
+                <viewController id="WLa-yu-eSO" customClass="PIDViewController" customModule="sdhacks16_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8lb-cp-ohX"/>
+                        <viewControllerLayoutGuide type="bottom" id="nPH-aF-udd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d4e-Es-USF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PINBG" translatesAutoresizingMaskIntoConstraints="NO" id="ypt-Sr-e4J"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FreeClicker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHO-WQ-wWZ">
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="46"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter your PID" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="elV-jx-urb">
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="elV-jx-urb" firstAttribute="centerX" secondItem="ypt-Sr-e4J" secondAttribute="centerX" id="09F-5r-P0E"/>
+                            <constraint firstItem="nHO-WQ-wWZ" firstAttribute="top" secondItem="8lb-cp-ohX" secondAttribute="bottom" constant="101" id="I4h-pO-UN5"/>
+                            <constraint firstItem="ypt-Sr-e4J" firstAttribute="centerX" secondItem="d4e-Es-USF" secondAttribute="centerX" id="M1E-an-qUP"/>
+                            <constraint firstItem="ypt-Sr-e4J" firstAttribute="width" secondItem="d4e-Es-USF" secondAttribute="width" id="Mdf-vX-gAf"/>
+                            <constraint firstItem="ypt-Sr-e4J" firstAttribute="height" secondItem="d4e-Es-USF" secondAttribute="height" id="QaK-Ur-atH"/>
+                            <constraint firstItem="ypt-Sr-e4J" firstAttribute="top" secondItem="8lb-cp-ohX" secondAttribute="bottom" id="TnU-Cr-sh9"/>
+                            <constraint firstItem="nHO-WQ-wWZ" firstAttribute="width" secondItem="d4e-Es-USF" secondAttribute="width" id="crE-VE-zuN"/>
+                            <constraint firstItem="elV-jx-urb" firstAttribute="centerY" secondItem="ypt-Sr-e4J" secondAttribute="centerY" id="gYG-cl-YgF"/>
+                            <constraint firstItem="nHO-WQ-wWZ" firstAttribute="centerX" secondItem="d4e-Es-USF" secondAttribute="centerX" id="qux-eU-Tns"/>
+                            <constraint firstItem="elV-jx-urb" firstAttribute="width" secondItem="ypt-Sr-e4J" secondAttribute="width" id="zcD-qq-UDh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UJH-Vp-3bA"/>
+                    <connections>
+                        <outlet property="PIDTextView" destination="elV-jx-urb" id="gFN-h2-y86"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="twC-Hp-Cdf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="738" y="474"/>
+        </scene>
         <!--Add Courses-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="AddClassesViewController" customModule="sdhacks16_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddClassesViewController" id="BYZ-38-t0r" customClass="AddClassesViewController" customModule="sdhacks16_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -125,12 +172,15 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mZG-rL-BVj"/>
+                        <segue destination="WLa-yu-eSO" kind="relationship" relationship="rootViewController" id="Dui-5C-S6k"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bLR-VS-taw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="733.60000000000002" y="474.51274362818594"/>
+            <point key="canvasLocation" x="23" y="475"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="PINBG" width="313" height="653"/>
+    </resources>
 </document>
