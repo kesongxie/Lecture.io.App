@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
-class InClassViewController: UIViewController {
+
+class InClassViewController: UIViewController, UITextViewDelegate {
 
 	@IBOutlet weak var QuestionIDText: UITextField!
 	@IBOutlet weak var responseText: UITextView!
@@ -16,6 +19,7 @@ class InClassViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+		responseText.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,5 +37,32 @@ class InClassViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+	
+	func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+		/* 
+		let parameters: [String: AnyObject] = [
+			"IdQuiz" : 102,
+			"IdUser" : "iosclient",
+			"User" : "iosclient",
+			"List": [
+				[
+					"IdQuestion" : 5,
+					"IdProposition": 2,
+					"Time" : 32
+				],
+				[
+					"IdQuestion" : 4,
+					"IdProposition": 3,
+					"Time" : 9
+				]
+			]
+		]
+		
+		Alamofire.request(.POST, "http://myserver.com", parameters: parameters, encoding: .JSON)
+			.responseJSON { request, response, JSON, error in
+				print(response)
+				print(JSON)
+				print(error)
+		}*/
+	  }
 }
