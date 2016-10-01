@@ -20,6 +20,9 @@ class RegisteredClassListTableViewController: UITableViewController {
         self.tableView.estimatedRowHeight = self.tableView.rowHeight
         self.tableView.rowHeight = UITableViewAutomaticDimension
 		self.tableView.tableFooterView = UIView()
+		
+		
+		
 		self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navbarBG"), for: .default)
 		self.navigationController?.navigationBar.tintColor = UIColor.white
 		navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]

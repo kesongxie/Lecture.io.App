@@ -23,7 +23,7 @@ class QAViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
 		//self.tableView.tableFooterView = UIView()
 		//self.tableView
         // Do any additional setup after loading the view.
-    }
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -43,7 +43,8 @@ class QAViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
 	}
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "QATableViewCell", for: indexPath) as! QATableViewCell
-		
+		cell.layer.borderWidth = 1
+		cell.layer.borderColor = UIColor.darkGray.cgColor
 		switch indexPath.row {
 		case 0:
 			cell.answerTextLabel.text = "A"

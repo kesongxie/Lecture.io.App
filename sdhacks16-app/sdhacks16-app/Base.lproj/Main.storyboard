@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -435,7 +434,7 @@
                                     <constraint firstAttribute="height" constant="255" id="xTG-ZW-MXJ"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="QATableViewCell" rowHeight="51" id="w2E-EO-ks4" customClass="QATableViewCell" customModule="sdhacks16_app" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="QATableViewCell" rowHeight="51" id="w2E-EO-ks4" customClass="QATableViewCell" customModule="sdhacks16_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="240" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w2E-EO-ks4" id="gG0-Ce-n2w">
@@ -450,9 +449,11 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="LO5-W5-Y7D" firstAttribute="centerY" secondItem="gG0-Ce-n2w" secondAttribute="centerY" id="28B-gp-jDn"/>
-                                                <constraint firstItem="LO5-W5-Y7D" firstAttribute="leading" secondItem="gG0-Ce-n2w" secondAttribute="leadingMargin" constant="91" id="DJg-ku-GOv"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="LO5-W5-Y7D" firstAttribute="centerX" secondItem="w2E-EO-ks4" secondAttribute="centerX" id="XlD-9c-uPY"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="answerTextLabel" destination="LO5-W5-Y7D" id="Jmx-aK-Ypi"/>
                                             <outlet property="textLabel" destination="LO5-W5-Y7D" id="Qci-A1-bYF"/>
@@ -480,9 +481,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hwu-f8-aoa" firstAttribute="top" secondItem="nG8-qG-n3H" secondAttribute="bottom" constant="8" id="6qv-4u-CvT"/>
-                            <constraint firstItem="9cd-eg-tpl" firstAttribute="top" secondItem="hwu-f8-aoa" secondAttribute="bottom" constant="60.5" id="Am1-7F-BRb"/>
+                            <constraint firstItem="9cd-eg-tpl" firstAttribute="top" secondItem="hwu-f8-aoa" secondAttribute="bottom" constant="48" id="Am1-7F-BRb"/>
                             <constraint firstItem="9cd-eg-tpl" firstAttribute="width" secondItem="hwu-f8-aoa" secondAttribute="width" id="EjX-Wr-TIb"/>
-                            <constraint firstItem="hwu-f8-aoa" firstAttribute="centerX" secondItem="9cd-eg-tpl" secondAttribute="centerX" constant="-1.5" id="Wid-nh-HxN"/>
+                            <constraint firstItem="9cd-eg-tpl" firstAttribute="centerX" secondItem="V8u-uL-XO2" secondAttribute="centerX" id="X8l-9v-wu0"/>
                             <constraint firstItem="hwu-f8-aoa" firstAttribute="trailing" secondItem="nG8-qG-n3H" secondAttribute="trailing" constant="-0.5" id="d1d-1p-k4v"/>
                             <constraint firstItem="hwu-f8-aoa" firstAttribute="centerX" secondItem="V8u-uL-XO2" secondAttribute="centerX" constant="-1" id="hmh-oT-gio"/>
                             <constraint firstItem="hwu-f8-aoa" firstAttribute="top" secondItem="Htn-Be-S7c" secondAttribute="bottom" constant="13" id="lHi-W7-zKp"/>
