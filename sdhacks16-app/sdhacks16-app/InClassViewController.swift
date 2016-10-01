@@ -64,5 +64,6 @@ class InClassViewController: UIViewController, UITextViewDelegate {
 				print(JSON)
 				print(error)
 		}*/
-	  }
+		return true
+	}
 }
