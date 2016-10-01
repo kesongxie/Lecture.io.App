@@ -9,4 +9,5 @@
 import Foundation
 
 
-let isUserHasAddedCoursesKey = "isUserHasAddedCourses"
+let isUserHasAddedCoursesKey = "isUserHasAddedCoursesKey"
+let courseRegisteredKey = "courseRegisteredKey"

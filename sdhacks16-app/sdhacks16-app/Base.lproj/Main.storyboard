@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WLa-yu-eSO">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -29,10 +29,22 @@
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ili-0a-Wm4">
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Fad-0f-mgS" kind="show" id="BAR-hT-1fs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="elV-jx-urb" firstAttribute="centerX" secondItem="ypt-Sr-e4J" secondAttribute="centerX" id="09F-5r-P0E"/>
+                            <constraint firstItem="ili-0a-Wm4" firstAttribute="top" secondItem="elV-jx-urb" secondAttribute="bottom" constant="8" id="8MA-Cl-EpB"/>
+                            <constraint firstItem="ili-0a-Wm4" firstAttribute="centerX" secondItem="elV-jx-urb" secondAttribute="centerX" id="AdR-vW-S61"/>
                             <constraint firstItem="nHO-WQ-wWZ" firstAttribute="top" secondItem="8lb-cp-ohX" secondAttribute="bottom" constant="101" id="I4h-pO-UN5"/>
                             <constraint firstItem="ypt-Sr-e4J" firstAttribute="centerX" secondItem="d4e-Es-USF" secondAttribute="centerX" id="M1E-an-qUP"/>
                             <constraint firstItem="ypt-Sr-e4J" firstAttribute="width" secondItem="d4e-Es-USF" secondAttribute="width" id="Mdf-vX-gAf"/>
@@ -40,6 +52,7 @@
                             <constraint firstItem="ypt-Sr-e4J" firstAttribute="top" secondItem="8lb-cp-ohX" secondAttribute="bottom" constant="-20" id="TnU-Cr-sh9"/>
                             <constraint firstItem="nHO-WQ-wWZ" firstAttribute="width" secondItem="d4e-Es-USF" secondAttribute="width" id="crE-VE-zuN"/>
                             <constraint firstItem="elV-jx-urb" firstAttribute="centerY" secondItem="ypt-Sr-e4J" secondAttribute="centerY" constant="-12" id="gYG-cl-YgF"/>
+                            <constraint firstItem="ili-0a-Wm4" firstAttribute="width" secondItem="elV-jx-urb" secondAttribute="width" id="nnk-qf-rfW"/>
                             <constraint firstItem="nHO-WQ-wWZ" firstAttribute="centerX" secondItem="d4e-Es-USF" secondAttribute="centerX" id="qux-eU-Tns"/>
                             <constraint firstItem="elV-jx-urb" firstAttribute="width" secondItem="ypt-Sr-e4J" secondAttribute="width" id="zcD-qq-UDh"/>
                         </constraints>
@@ -177,7 +190,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YOg-SH-Oz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1437.5999999999999" y="474.51274362818594"/>
+            <point key="canvasLocation" x="1494" y="473"/>
         </scene>
     </scenes>
     <resources>
