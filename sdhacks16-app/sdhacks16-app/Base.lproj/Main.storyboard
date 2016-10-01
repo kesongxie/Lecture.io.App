@@ -174,6 +174,69 @@
             </objects>
             <point key="canvasLocation" x="3052" y="465.51724137931041"/>
         </scene>
+        <!--In Class View Controller-->
+        <scene sceneID="hP6-CB-Pux">
+            <objects>
+                <viewController id="Md1-eF-o1v" customClass="InClassViewController" customModule="sdhacks16_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="O0y-Bb-0fh"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ybw-Xx-3PA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bC7-QD-tW9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aA9-rB-JGV">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="AfP-Zh-Cr6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="64U-TW-mY5">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="aS2-0B-dsh"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Id" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbn-jA-wnS">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Response" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjq-iT-SMF">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aA9-rB-JGV" firstAttribute="width" secondItem="bC7-QD-tW9" secondAttribute="width" id="1vC-va-IP6"/>
+                            <constraint firstItem="aA9-rB-JGV" firstAttribute="top" secondItem="Gjq-iT-SMF" secondAttribute="bottom" constant="8" symbolic="YES" id="CqP-2Q-o4Q"/>
+                            <constraint firstItem="aA9-rB-JGV" firstAttribute="centerY" secondItem="bC7-QD-tW9" secondAttribute="centerY" id="DRW-rO-aOq"/>
+                            <constraint firstItem="64U-TW-mY5" firstAttribute="top" secondItem="jbn-jA-wnS" secondAttribute="bottom" constant="8" symbolic="YES" id="F5I-Ap-IAR"/>
+                            <constraint firstItem="64U-TW-mY5" firstAttribute="centerX" secondItem="jbn-jA-wnS" secondAttribute="centerX" id="Go8-w6-oLh"/>
+                            <constraint firstItem="jbn-jA-wnS" firstAttribute="width" secondItem="bC7-QD-tW9" secondAttribute="width" id="KtW-V7-m7K"/>
+                            <constraint firstItem="Gjq-iT-SMF" firstAttribute="width" secondItem="bC7-QD-tW9" secondAttribute="width" id="QJk-KY-AoJ"/>
+                            <constraint firstItem="jbn-jA-wnS" firstAttribute="top" secondItem="O0y-Bb-0fh" secondAttribute="bottom" constant="62" id="QfP-2d-EXI"/>
+                            <constraint firstItem="jbn-jA-wnS" firstAttribute="centerX" secondItem="bC7-QD-tW9" secondAttribute="centerX" id="e4N-uj-YO8"/>
+                            <constraint firstItem="aA9-rB-JGV" firstAttribute="centerX" secondItem="bC7-QD-tW9" secondAttribute="centerX" id="odH-P5-GrS"/>
+                            <constraint firstItem="jbn-jA-wnS" firstAttribute="leading" secondItem="Gjq-iT-SMF" secondAttribute="leading" id="zm8-Wi-rZh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="QuestionIDText" destination="64U-TW-mY5" id="QU5-WE-3WL"/>
+                        <outlet property="responseText" destination="aA9-rB-JGV" id="tIb-P1-Kce"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oum-lE-tTS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4232.8000000000002" y="462.8185907046477"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="amw-87-up7">
             <objects>
