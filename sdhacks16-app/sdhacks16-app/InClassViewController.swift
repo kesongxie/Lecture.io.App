@@ -39,31 +39,21 @@ class InClassViewController: UIViewController, UITextViewDelegate {
     */
 	
 	func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
-		/* 
-		let parameters: [String: AnyObject] = [
-			"IdQuiz" : 102,
-			"IdUser" : "iosclient",
-			"User" : "iosclient",
-			"List": [
-				[
-					"IdQuestion" : 5,
-					"IdProposition": 2,
-					"Time" : 32
-				],
-				[
-					"IdQuestion" : 4,
-					"IdProposition": 3,
-					"Time" : 9
-				]
+		if let pid = UserDefaults.standard.string(forKey: "pidValue"),
+			let questionID = QuestionIDText.text,
+			let responseString = responseText.text {
+			let parameters: Parameters = [
+				"pid" : pid,
+				"qid" : questionID,
+				"response": responseString
 			]
-		]
-		
-		Alamofire.request(.POST, "http://myserver.com", parameters: parameters, encoding: .JSON)
-			.responseJSON { request, response, JSON, error in
-				print(response)
-				print(JSON)
-				print(error)
-		}*/
-		return true
+			Alamofire.request("https://httpbin.org/post", method: .post, parameters: parameters, encoding: JSONEncoding.default).response { response in
+				print("Request: \(response.request)")
+				print("Response: \(response.response)")
+				print("Error: \(response.data)")
+			}
+			return true
+		}
+		return false
 	}
 }
