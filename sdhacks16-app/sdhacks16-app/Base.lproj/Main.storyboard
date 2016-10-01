@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qNg-sx-6m4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Add Courses-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AddClassesViewController" customModule="sdhacks16_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,120 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add course by code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTU-x9-bUB">
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your course code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UOP-mq-RFq">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnZ-bx-DEK">
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rYa-0b-XF0" kind="show" id="yZP-Pv-C68"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pnZ-bx-DEK" firstAttribute="top" secondItem="UOP-mq-RFq" secondAttribute="bottom" constant="20" id="9mG-qL-xN4"/>
+                            <constraint firstItem="pnZ-bx-DEK" firstAttribute="width" secondItem="UOP-mq-RFq" secondAttribute="width" id="ES7-iq-AQl"/>
+                            <constraint firstItem="VTU-x9-bUB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EsY-5o-0uG"/>
+                            <constraint firstAttribute="trailing" secondItem="UOP-mq-RFq" secondAttribute="trailing" constant="16" id="GX3-dl-ypY"/>
+                            <constraint firstItem="pnZ-bx-DEK" firstAttribute="centerX" secondItem="UOP-mq-RFq" secondAttribute="centerX" id="KsE-Ak-54m"/>
+                            <constraint firstItem="UOP-mq-RFq" firstAttribute="centerX" secondItem="VTU-x9-bUB" secondAttribute="centerX" id="gab-4K-TUl"/>
+                            <constraint firstItem="UOP-mq-RFq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="jfq-OB-3to"/>
+                            <constraint firstItem="VTU-x9-bUB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="weB-pK-tOk"/>
+                            <constraint firstItem="UOP-mq-RFq" firstAttribute="top" secondItem="VTU-x9-bUB" secondAttribute="bottom" constant="30" id="wte-FG-JKq"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Courses" id="osX-py-hpc"/>
+                    <connections>
+                        <outlet property="codeTextField" destination="UOP-mq-RFq" id="4nz-g9-E0V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1439" y="475"/>
+        </scene>
+        <!--Course Confirmation View Controller-->
+        <scene sceneID="6E7-Pg-nbv">
+            <objects>
+                <viewController id="rYa-0b-XF0" customClass="CourseConfirmationViewController" customModule="sdhacks16_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DTT-gp-IBC"/>
+                        <viewControllerLayoutGuide type="bottom" id="aJg-bj-Jny"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lf8-1C-C4S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CSE 100 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObA-Cd-vT8">
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advanced Data Structure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69l-3R-hff">
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jR-l1-ZMS">
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="69l-3R-hff" firstAttribute="top" secondItem="ObA-Cd-vT8" secondAttribute="bottom" constant="8" id="0lE-6y-cw8"/>
+                            <constraint firstItem="ObA-Cd-vT8" firstAttribute="top" secondItem="DTT-gp-IBC" secondAttribute="bottom" constant="58" id="2IM-cq-9Mb"/>
+                            <constraint firstItem="4jR-l1-ZMS" firstAttribute="width" secondItem="69l-3R-hff" secondAttribute="width" id="7Ti-bu-kAH"/>
+                            <constraint firstItem="4jR-l1-ZMS" firstAttribute="top" secondItem="69l-3R-hff" secondAttribute="bottom" constant="36" id="HOE-yC-9iP"/>
+                            <constraint firstAttribute="trailing" secondItem="ObA-Cd-vT8" secondAttribute="trailing" constant="20" symbolic="YES" id="URt-Wk-4E1"/>
+                            <constraint firstItem="ObA-Cd-vT8" firstAttribute="leading" secondItem="Lf8-1C-C4S" secondAttribute="leading" constant="20" symbolic="YES" id="XEG-mC-arI"/>
+                            <constraint firstItem="4jR-l1-ZMS" firstAttribute="centerX" secondItem="69l-3R-hff" secondAttribute="centerX" id="YoL-9Z-3Vb"/>
+                            <constraint firstItem="69l-3R-hff" firstAttribute="width" secondItem="ObA-Cd-vT8" secondAttribute="width" id="elS-33-qWZ"/>
+                            <constraint firstItem="ObA-Cd-vT8" firstAttribute="centerX" secondItem="Lf8-1C-C4S" secondAttribute="centerX" id="itY-1h-p7Z"/>
+                            <constraint firstItem="69l-3R-hff" firstAttribute="centerX" secondItem="ObA-Cd-vT8" secondAttribute="centerX" id="kYZ-pB-qgQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="courseName" destination="ObA-Cd-vT8" id="hxf-7C-L65"/>
+                        <outlet property="courseTitle" destination="69l-3R-hff" id="uWC-Tp-HrE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BKF-FH-UY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2113" y="466"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9bC-OU-Gt7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qNg-sx-6m4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wjw-oM-lyF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mZG-rL-BVj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bLR-VS-taw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="733.60000000000002" y="474.51274362818594"/>
         </scene>
     </scenes>
 </document>

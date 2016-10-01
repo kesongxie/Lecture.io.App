@@ -13,10 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
 
+    var currentCourses = [Courses]()
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
-		return true
+        let course1 = Courses(courseCode: 2200, courseName: "CSE 100", courseTitle: "Advanced Data Structure")
+        let course2 = Courses(courseCode: 1100, courseName: "CSE 80", courseTitle: "Unix")
+        currentCourses.append(course1)
+        currentCourses.append(course2)
+     	return true
 	}
 
 	func applicationWillResignActive(_ application: UIApplication) {
