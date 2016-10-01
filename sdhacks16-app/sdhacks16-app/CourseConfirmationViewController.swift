@@ -17,10 +17,23 @@ class CourseConfirmationViewController: UIViewController {
     @IBOutlet weak var courseTitle: UILabel!
     
     
+    @IBOutlet weak var descirption: UILabel!
+    
+    @IBAction func cancelConfirmBtnTapped(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func confirmBtnTapped(_ sender: UIButton) {
+        confirmCourseRegisteration()
+    }
+    
+    
     var course: Courses?{
         didSet{
             courseName?.text = course!.courseName
             courseTitle?.text = course!.courseTitle
+            descirption?.text = course!.description
         }
     }
     
@@ -30,9 +43,8 @@ class CourseConfirmationViewController: UIViewController {
         if course != nil{
             courseName?.text = course!.courseName
             courseTitle?.text = course!.courseTitle
+            descirption?.text = course!.description
         }
-        
-        confirmCourseRegisteration()
         // Do any additional setup after loading the view.
     }
 
@@ -61,11 +73,16 @@ class CourseConfirmationViewController: UIViewController {
                     }
                 }
                 if !found{
+                    //add courses if not already existed
                     courseRegisteredCodeList.append(course!.courseCode)
                     userDefault.set(courseRegisteredCodeList, forKey: courseRegisteredKey)
+                    
+                    //send a notification to the registedTableviewController to update the UI
+                    let addedCourseNotification = Notification(name: Notification.Name(rawValue: addedCourseNotificationName), object: self, userInfo: nil)
+                    NotificationCenter.default.post(addedCourseNotification)
                 }
-                //courseRegistered.append(course!.courseCode)
             }else{
+                //add new courses if the student has not yet add any courses
                 let coursesCodesList = [course!.courseCode]
                 userDefault.set(coursesCodesList, forKey: courseRegisteredKey)
                 

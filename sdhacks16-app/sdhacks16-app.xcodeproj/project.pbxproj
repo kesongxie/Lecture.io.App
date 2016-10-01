@@ -15,12 +15,19 @@
 		431D5B7F1D9F8F5C00429AEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431D5B7D1D9F8F5C00429AEF /* LaunchScreen.storyboard */; };
 		431D5B8A1D9F8F5C00429AEF /* sdhacks16_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431D5B891D9F8F5C00429AEF /* sdhacks16_appTests.swift */; };
 		431D5B951D9F8F5C00429AEF /* sdhacks16_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431D5B941D9F8F5C00429AEF /* sdhacks16_appUITests.swift */; };
-		43DCD8991D9FB2EF00F1D8D1 /* InClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DCD8981D9FB2EF00F1D8D1 /* InClassViewController.swift */; };
 		6D82FCEACCB43662C08B136B /* Pods_sdhacks16_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 169BDAF797D31BB7F561AFF6 /* Pods_sdhacks16_appUITests.framework */; };
 		98DBA7C91D9F926200A37778 /* AddClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DBA7C81D9F926200A37778 /* AddClassesViewController.swift */; };
 		98DBA7CF1D9F969A00A37778 /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DBA7CE1D9F969A00A37778 /* Courses.swift */; };
 		98DBA7D11D9F99C600A37778 /* CourseConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DBA7D01D9F99C600A37778 /* CourseConfirmationViewController.swift */; };
 		98DBA7D31D9FA53B00A37778 /* Macro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DBA7D21D9FA53B00A37778 /* Macro.swift */; };
+		98DBA7D61D9FB78500A37778 /* RegisteredClassListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DBA7D51D9FB78500A37778 /* RegisteredClassListTableViewController.swift */; };
+		98DBA7D81D9FB7D800A37778 /* RegisteredClassListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DBA7D71D9FB7D800A37778 /* RegisteredClassListTableViewCell.swift */; };
+		98DBA7DA1DA0168600A37778 /* CoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DBA7D91DA0168600A37778 /* CoursesTableViewController.swift */; };
+		98DBA7DD1DA01AFC00A37778 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DBA7DC1DA01AFC00A37778 /* Question.swift */; };
+		98DBA7DF1DA01B3D00A37778 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DBA7DE1DA01B3D00A37778 /* Lecture.swift */; };
+		98DBA7E11DA01ED100A37778 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DBA7E01DA01ED100A37778 /* Student.swift */; };
+		98DBA7E41DA0239900A37778 /* QuestionHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DBA7E31DA0239900A37778 /* QuestionHistoryTableViewController.swift */; };
+		98DBA7E61DA0245200A37778 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DBA7E51DA0245200A37778 /* QuestionTableViewCell.swift */; };
 		9A2C6B47295142FC5B1AC615 /* Pods_sdhacks16_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE1182CFBF3C0D4F0839A4C /* Pods_sdhacks16_appTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,13 +67,20 @@
 		431D5B901D9F8F5C00429AEF /* sdhacks16-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sdhacks16-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		431D5B941D9F8F5C00429AEF /* sdhacks16_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sdhacks16_appUITests.swift; sourceTree = "<group>"; };
 		431D5B961D9F8F5C00429AEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		43DCD8981D9FB2EF00F1D8D1 /* InClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InClassViewController.swift; sourceTree = "<group>"; };
 		480A018549C2DB07BA4685CB /* Pods_sdhacks16_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sdhacks16_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A37DDF7C2AFDA3DD45FEA6B /* Pods-sdhacks16-appUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdhacks16-appUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sdhacks16-appUITests/Pods-sdhacks16-appUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		98DBA7C81D9F926200A37778 /* AddClassesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassesViewController.swift; sourceTree = "<group>"; };
 		98DBA7CE1D9F969A00A37778 /* Courses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Courses.swift; sourceTree = "<group>"; };
 		98DBA7D01D9F99C600A37778 /* CourseConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseConfirmationViewController.swift; sourceTree = "<group>"; };
 		98DBA7D21D9FA53B00A37778 /* Macro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Macro.swift; sourceTree = "<group>"; };
+		98DBA7D51D9FB78500A37778 /* RegisteredClassListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisteredClassListTableViewController.swift; sourceTree = "<group>"; };
+		98DBA7D71D9FB7D800A37778 /* RegisteredClassListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisteredClassListTableViewCell.swift; sourceTree = "<group>"; };
+		98DBA7D91DA0168600A37778 /* CoursesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesTableViewController.swift; sourceTree = "<group>"; };
+		98DBA7DC1DA01AFC00A37778 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		98DBA7DE1DA01B3D00A37778 /* Lecture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
+		98DBA7E01DA01ED100A37778 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		98DBA7E31DA0239900A37778 /* QuestionHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionHistoryTableViewController.swift; sourceTree = "<group>"; };
+		98DBA7E51DA0245200A37778 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		AEE1182CFBF3C0D4F0839A4C /* Pods_sdhacks16_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sdhacks16_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC21AF24EBC62D7E83B81DAB /* Pods-sdhacks16-appUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdhacks16-appUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sdhacks16-appUITests/Pods-sdhacks16-appUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,14 +140,17 @@
 			children = (
 				431D5B741D9F8F5C00429AEF /* AppDelegate.swift */,
 				98DBA7CE1D9F969A00A37778 /* Courses.swift */,
+				98DBA7DE1DA01B3D00A37778 /* Lecture.swift */,
+				98DBA7E01DA01ED100A37778 /* Student.swift */,
+				98DBA7DC1DA01AFC00A37778 /* Question.swift */,
 				98DBA7D21D9FA53B00A37778 /* Macro.swift */,
 				98DBA7CA1D9F926800A37778 /* Add Class */,
 				431D5B761D9F8F5C00429AEF /* PIDViewController.swift */,
+				98DBA7D41D9FB75D00A37778 /* RegistedClassList */,
 				431D5B781D9F8F5C00429AEF /* Main.storyboard */,
 				431D5B7B1D9F8F5C00429AEF /* Assets.xcassets */,
 				431D5B7D1D9F8F5C00429AEF /* LaunchScreen.storyboard */,
 				431D5B801D9F8F5C00429AEF /* Info.plist */,
-				43DCD8981D9FB2EF00F1D8D1 /* InClassViewController.swift */,
 			);
 			path = "sdhacks16-app";
 			sourceTree = "<group>";
@@ -173,6 +190,34 @@
 				98DBA7D01D9F99C600A37778 /* CourseConfirmationViewController.swift */,
 			);
 			name = "Add Class";
+			sourceTree = "<group>";
+		};
+		98DBA7D41D9FB75D00A37778 /* RegistedClassList */ = {
+			isa = PBXGroup;
+			children = (
+				98DBA7D51D9FB78500A37778 /* RegisteredClassListTableViewController.swift */,
+				98DBA7D71D9FB7D800A37778 /* RegisteredClassListTableViewCell.swift */,
+				98DBA7DB1DA0168B00A37778 /* CourseView */,
+			);
+			name = RegistedClassList;
+			sourceTree = "<group>";
+		};
+		98DBA7DB1DA0168B00A37778 /* CourseView */ = {
+			isa = PBXGroup;
+			children = (
+				98DBA7D91DA0168600A37778 /* CoursesTableViewController.swift */,
+				98DBA7E21DA0238100A37778 /* QuestionHistory */,
+			);
+			name = CourseView;
+			sourceTree = "<group>";
+		};
+		98DBA7E21DA0238100A37778 /* QuestionHistory */ = {
+			isa = PBXGroup;
+			children = (
+				98DBA7E31DA0239900A37778 /* QuestionHistoryTableViewController.swift */,
+				98DBA7E51DA0245200A37778 /* QuestionTableViewCell.swift */,
+			);
+			name = QuestionHistory;
 			sourceTree = "<group>";
 		};
 		FEC49E438579D6868145B5FC /* Pods */ = {
@@ -455,12 +500,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				98DBA7D11D9F99C600A37778 /* CourseConfirmationViewController.swift in Sources */,
+				98DBA7DA1DA0168600A37778 /* CoursesTableViewController.swift in Sources */,
+				98DBA7D81D9FB7D800A37778 /* RegisteredClassListTableViewCell.swift in Sources */,
 				98DBA7CF1D9F969A00A37778 /* Courses.swift in Sources */,
 				431D5B771D9F8F5C00429AEF /* PIDViewController.swift in Sources */,
+				98DBA7DD1DA01AFC00A37778 /* Question.swift in Sources */,
 				431D5B751D9F8F5C00429AEF /* AppDelegate.swift in Sources */,
-				43DCD8991D9FB2EF00F1D8D1 /* InClassViewController.swift in Sources */,
+				98DBA7E41DA0239900A37778 /* QuestionHistoryTableViewController.swift in Sources */,
+				98DBA7E11DA01ED100A37778 /* Student.swift in Sources */,
 				98DBA7D31D9FA53B00A37778 /* Macro.swift in Sources */,
+				98DBA7DF1DA01B3D00A37778 /* Lecture.swift in Sources */,
+				98DBA7D61D9FB78500A37778 /* RegisteredClassListTableViewController.swift in Sources */,
 				98DBA7C91D9F926200A37778 /* AddClassesViewController.swift in Sources */,
+				98DBA7E61DA0245200A37778 /* QuestionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

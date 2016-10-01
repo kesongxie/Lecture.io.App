@@ -7,7 +7,25 @@
 //
 
 import Foundation
+import UIKit
 
 
 let isUserHasAddedCoursesKey = "isUserHasAddedCoursesKey"
 let courseRegisteredKey = "courseRegisteredKey"
+
+let addedCourseNotificationName = "addedCourseNotificationName"
+
+func getCourseFromCourseCode(code: Int) -> Courses?{
+    if let currentCourse = (UIApplication.shared.delegate as? AppDelegate)?.currentCourses{
+        for course in currentCourse{
+            if course.courseCode == code{
+                return course
+            }
+        }
+    }
+    return nil
+}
+
+func getCurrentStudent() -> Student?{
+    return (UIApplication.shared.delegate as? AppDelegate)?.currentStudent
+}

@@ -42,6 +42,7 @@ class AddClassesViewController: UIViewController {
                 courseConfirmVC.course = selectedCourse
             }
         }
+        view.endEditing(true)
     }
  
 
