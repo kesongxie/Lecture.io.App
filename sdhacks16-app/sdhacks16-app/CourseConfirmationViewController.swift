@@ -50,7 +50,7 @@ class CourseConfirmationViewController: UIViewController {
             if var courseRegistered = userDefault.array(forKey: courseRegisteredKey) as? [Int]{
                 courseRegistered.append(course!.courseCode)
             }else{
-               //userDefault.set
+               // userDefault.
             }
             
             
