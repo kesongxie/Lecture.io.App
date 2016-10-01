@@ -31,12 +31,33 @@ class CourseConfirmationViewController: UIViewController {
             courseName?.text = course!.courseName
             courseTitle?.text = course!.courseTitle
         }
+        
+        confirmCourseRegisteration()
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    func confirmCourseRegisteration(){
+        //add the course code to the user default
+        let userDefault = UserDefaults()
+        if !userDefault.bool(forKey: isUserHasAddedCoursesKey){
+            userDefault.set(true, forKey: isUserHasAddedCoursesKey)
+            let courseRegistered = userDefault.array(forKey: courseRegistered)
+            
+            
+            
+            
+        }else{
+            userDefault.set(false, forKey: isUserHasAddedCoursesIden)
+        }
+        
+        //userDefault.dictionary(forKey: "courseCodeList")
+        
     }
     
 
