@@ -17,7 +17,4 @@ class Courses{
         self.courseName = courseName
         self.courseTitle = courseTitle
     }
-    
-    
-    
 }
