@@ -8,18 +8,42 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
-class QAViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class QAViewController: UIViewController,UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
 	
 	@IBOutlet weak var questionID: UITextField!
 	@IBOutlet weak var sendButton: UIButton!
 	@IBOutlet weak var tableView: UITableView!
 	
+	
+	
+	@IBAction func sendButtonPressed(_ sender: AnyObject) {
+		if let indexPath = self.tableView.indexPathForSelectedRow {
+			let selectedCell = self.tableView.cellForRow(at: indexPath) as! QATableViewCell
+			let response:String = selectedCell.answerTextLabel.text!
+			let pid:String = UserDefaults.standard.string(forKey: "pidValue")!
+			let qid:String = questionID.text!
+			let json : Parameters = ["PID":pid, "qid": qid, "response": response]
+			let urlString = "https://sdhack16.herokuapp.com/iphone"
+			
+			Alamofire.request(urlString, method: .post, parameters: json, encoding: JSONEncoding.default).downloadProgress(queue: DispatchQueue.global()) { progress in
+					print("Progress: \(progress.fractionCompleted)")
+				}.validate { request, response, data in
+					// Custom evaluation closure now includes data (allows you to parse data to dig out error messages if necessary)
+					return .success
+				}.responseJSON { response in
+					debugPrint(response)
+			}
+			
+		}
+	}
     override func viewDidLoad() {
         super.viewDidLoad()
 		
 		self.tableView.delegate = self
 		self.tableView.dataSource = self
+		questionID.delegate = self
 		//self.tableView.tableFooterView = UIView()
 		//self.tableView
         // Do any additional setup after loading the view.
@@ -66,26 +90,12 @@ class QAViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
 	}
 	func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
 	}
-	
-	func sendButtonPressed() {
-		if let indexPath = self.tableView.indexPathForSelectedRow {
-			let qid = questionID.text
-			let selectedCell = self.tableView.cellForRow(at: indexPath) as! QATableViewCell
-			let responseString = selectedCell.answerTextLabel.text
-			let pid = UserDefaults.standard.string(forKey: "pidValue")
-	 			let parameters: Parameters = [
-	 				"pid" : pid,
-	 				"qid" : qid,
-	 				"response": responseString
-			  ]
-				Alamofire.request("https://httpbin.org/post", method: .post, parameters: parameters, encoding: JSONEncoding.default).response { response in
-	 				print("Request: \(response.request)")
-	 				print("Response: \(response.response)")
-	 				print("Error: \(response.data)")
-	 			}
-	 		}
-	}
 
+	
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		self.view.endEditing(true)
+		return true
+	}
     /*
     // MARK: - Navigation
 
