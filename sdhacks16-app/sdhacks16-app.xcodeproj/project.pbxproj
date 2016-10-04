@@ -16,6 +16,7 @@
 		431D5B8A1D9F8F5C00429AEF /* sdhacks16_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431D5B891D9F8F5C00429AEF /* sdhacks16_appTests.swift */; };
 		431D5B951D9F8F5C00429AEF /* sdhacks16_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431D5B941D9F8F5C00429AEF /* sdhacks16_appUITests.swift */; };
 		43DCD8A01DA02A4D00F1D8D1 /* QAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DCD89E1DA02A4D00F1D8D1 /* QAViewController.swift */; };
+		43DCD8A31DA0334C00F1D8D1 /* QATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DCD8A21DA0334C00F1D8D1 /* QATableViewCell.swift */; };
 		6D82FCEACCB43662C08B136B /* Pods_sdhacks16_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 169BDAF797D31BB7F561AFF6 /* Pods_sdhacks16_appUITests.framework */; };
 		98DBA7C91D9F926200A37778 /* AddClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DBA7C81D9F926200A37778 /* AddClassesViewController.swift */; };
 		98DBA7CF1D9F969A00A37778 /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DBA7CE1D9F969A00A37778 /* Courses.swift */; };
@@ -69,6 +70,7 @@
 		431D5B941D9F8F5C00429AEF /* sdhacks16_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sdhacks16_appUITests.swift; sourceTree = "<group>"; };
 		431D5B961D9F8F5C00429AEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43DCD89E1DA02A4D00F1D8D1 /* QAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAViewController.swift; sourceTree = "<group>"; };
+		43DCD8A21DA0334C00F1D8D1 /* QATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QATableViewCell.swift; sourceTree = "<group>"; };
 		480A018549C2DB07BA4685CB /* Pods_sdhacks16_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sdhacks16_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A37DDF7C2AFDA3DD45FEA6B /* Pods-sdhacks16-appUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sdhacks16-appUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sdhacks16-appUITests/Pods-sdhacks16-appUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		98DBA7C81D9F926200A37778 /* AddClassesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassesViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				43DCD89E1DA02A4D00F1D8D1 /* QAViewController.swift */,
+				43DCD8A21DA0334C00F1D8D1 /* QATableViewCell.swift */,
 			);
 			name = LiveQA;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				98DBA7DA1DA0168600A37778 /* CoursesTableViewController.swift in Sources */,
 				98DBA7D81D9FB7D800A37778 /* RegisteredClassListTableViewCell.swift in Sources */,
 				98DBA7CF1D9F969A00A37778 /* Courses.swift in Sources */,
+				43DCD8A31DA0334C00F1D8D1 /* QATableViewCell.swift in Sources */,
 				431D5B771D9F8F5C00429AEF /* PIDViewController.swift in Sources */,
 				98DBA7DD1DA01AFC00A37778 /* Question.swift in Sources */,
 				431D5B751D9F8F5C00429AEF /* AppDelegate.swift in Sources */,
